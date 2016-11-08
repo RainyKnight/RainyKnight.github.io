@@ -10,8 +10,9 @@ body{
     bottom: 0;
     width: 100%;
     height: bottom;
-    font-size: 80%;
+    font-size:H 80%;
     text-align:center;
+    /*background-color: #0d0d0d;*/
 }
 hr {
     display: block;
