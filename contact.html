@@ -15,6 +15,16 @@
         <link rel="stylesheet" wtype="text/css" href="style.css">
 
         <meta name="referrer" content="origin" />
+
+        <script>
+        function validateForm() {
+          var x = document.forms["myForm"]["name"].value;
+          if (x == "") {
+            alert ("Name must be filled out");
+            return false;
+          }
+        }
+        </script>
     </head>
     <body>
         <!-- awesome Bootstrap navbar below -->
@@ -44,7 +54,7 @@
             <br><br>
             <h1 style="text-align:center">Shoot me a message!</h1>
             <hr>
-            <form method="POST" action="http://formspree.io/lucastoltman@gmail.com">
+            <form name="myForm" method="POST" action="http://formspree.io/lucastoltman@gmail.com" onsubmit="return_validateForm()">
               <div class="form-group">
                 <label>Name:</label><br>
                 <input class="form-control" type="text" name="name" placeholder="Enter name">
