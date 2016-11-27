@@ -1,3 +1,27 @@
+<?php
+
+$to = 'stoltmanlucas@gmail.com';
+$subject = 'Website Reply';
+
+$name = $_POST['nameInput'];
+$email = $_POST['emailInput'];
+$message = $_POST['messageInput'];
+
+$message = <<<EMAIL
+
+$message
+
+EMAIL;
+
+$header = '$email';
+
+if($_POST){
+  mail($to, $subject, $message, $headers)
+  $feedback = 'Thanks for the email!';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,7 +32,7 @@
 
         <title>LS | Contact</title>
         <link rel="icon" href="images\favicon.png"
-        
+
         <!-- Bootstrap -->
         <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -42,19 +66,21 @@
             <br><br>
             <h1 style="text-align:center">Shoot me a message!</h1>
             <hr>
-            <div class="form-group">
-                <label for="name">Name:</label><br>
-                <input class="form-control" type="text" placeholder="Leo Tolstoy" required="required" id="nameInput">
+            <form method="post" action="contactform/libs/index.php">
+              <div class="form-group">
+                <label>Name:</label><br>
+                <input class="form-control" name="name"  placeholder="Enter name">
                 <br><br>
-                <label for="email">Email:</label><br>
-                <input class="form-control" type="email" placeholder="warandpeace@example.com" required="required" id="emailInput">
+                <label>Email:</label><br>
+                <input class="form-control" name="email" type="email" placeholder="Enter email">
                 <br><br>
-                <label for="message">Message:</label><br>
-                <textarea class="form-control" rows="12" placeholder="Please type your message here." required="required" id="messageInput"></textarea><br>
+                <label>Message:</label><br>
+                <textarea class="form-control" name="message" rows="12" placeholder="Please type your message here."></textarea><br>
                 <center>
-                <input class="form-control" type="button" value="Submit" style="width: 200px; background-color: silver;"></center>
-            </div>
-            <br><br><br><br><br>
+                <input class="form-control" id="submit" name="submit" type="submit" value="Submit" style="width: 200px; background-color: silver;"></center>
+              </div>
+            </form>
+            <br><br>
         </div>
         <footer class="footer">
             <div class="container">
