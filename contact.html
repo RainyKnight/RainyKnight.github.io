@@ -1,27 +1,3 @@
-<?php
-
-$to = 'stoltmanlucas@gmail.com';
-$subject = 'Website Reply';
-
-$name = $_POST['nameInput'];
-$email = $_POST['emailInput'];
-$message = $_POST['messageInput'];
-
-$message = <<<EMAIL
-
-$message
-
-EMAIL;
-
-$header = '$email';
-
-if($_POST){
-  mail($to, $subject, $message, $headers)
-  $feedback = 'Thanks for the email!';
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
