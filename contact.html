@@ -57,17 +57,16 @@
             <form name="myForm" method="POST" action="http://formspree.io/lucastoltman@gmail.com" onsubmit="return_validateForm()">
               <div class="form-group">
                 <label>Name:</label><br>
-                <input class="form-control" type="text" name="name" placeholder="Enter name">
+                <input class="form-control" type="text" name="name" placeholder="Enter name" required>
                 <br><br>
                 <label>Email:</label><br>
-                <input class="form-control" type="email" name="_replyto" placeholder="Enter email">
+                <input class="form-control" type="text" name="_replyto" placeholder="Enter email" required>
                 <br><br>
                 <label>Message:</label><br>
-                <textarea class="form-control" name="body" rows="12" placeholder="Please type your message here."></textarea><br>
+                <textarea class="form-control" name="body" rows="12" placeholder="Please type your message here." required></textarea><br>
                 <center>
                 <input class="form-control" type="submit" name="submit"  value="Send" style="width: 200px; background-color: silver;"></center>
                 <input type="hidden" name="_next" value="https://rainyknight.github.io/contact_thanks.html" />
-                <input type="hidden" name="_subject" value="New submission!" />
               </div>
             </form>
             <br><br>
