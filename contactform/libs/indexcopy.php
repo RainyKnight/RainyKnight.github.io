@@ -31,7 +31,7 @@ End of message
 mail($myemail, $subject, $message);
 
 /* Redirect visitor to the thank you page */
-header('Location: contact_thanks.html');
+header('Location: http://lucasstoltman.com/contact_thanks.html');
 exit();
 
 /* Functions we used */
