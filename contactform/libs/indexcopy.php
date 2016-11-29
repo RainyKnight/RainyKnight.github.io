@@ -18,7 +18,7 @@ $message = "Hello!
 
 Your contact form has been submitted by:
 
-Name: $yourname
+Name: $name
 E-mail: $email
 
 Comments:
@@ -28,7 +28,7 @@ End of message
 ";
 
 /* Send the message using mail() function */
-mail($myemail, $subject, $message);
+mail($myemail, $message);
 
 /* Redirect visitor to the thank you page
 header('Location: http://lucasstoltman.com/contact_thanks.html');
