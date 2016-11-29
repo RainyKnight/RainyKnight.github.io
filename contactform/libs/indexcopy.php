@@ -28,7 +28,7 @@ End of message
 ";
 
 /* Send the message using mail() function */
-mail($myemail, $name, $message);
+mail($myemail, "Website Contact Form", $message);
 
 /* Redirect visitor to the thank you page
 header('Location: http://lucasstoltman.com/contact_thanks.html');
