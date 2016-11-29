@@ -3,13 +3,13 @@
 if (isset($_POST["submit"])) {
   $name = $_POST['name'];
   $email = $_POST['email'];
-  $message = $_POST['message'];
+  $comments = $_POST['comments'];
 
   $from = 'Contact Form';
   $to = 'lucastoltman@gmail.com';
   $subject = 'Message from my Website!';
 
-  $body = "From: $name\n Email: $email\n Message:\n $message";
+  $body = "From: $name\n Email: $email\n Message:\n $comments";
 }
 
 /*if(isset($_POST['g-recaptcha-response'])){
