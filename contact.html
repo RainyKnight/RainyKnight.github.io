@@ -25,6 +25,9 @@
           }
         }
         </script>
+
+        <!-- Captcha Stuff -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
         <!-- awesome Bootstrap navbar below -->
@@ -60,11 +63,13 @@
                 <input class="form-control" type="text" name="name" placeholder="Enter name" required>
                 <br><br>
                 <label>Email:</label><br>
-                <input class="form-control" type="text" name="_replyto" placeholder="Enter email" required>
+                <input class="form-control" type="email" name="_replyto" placeholder="Enter email" required>
                 <br><br>
                 <label>Message:</label><br>
                 <textarea class="form-control" name="body" rows="12" placeholder="Please type your message here." required></textarea><br>
                 <center>
+                <div class="g-recaptcha" data-sitekey="6Lc-RQ0UAAAAAPDgOub0EGxc5ztNA3qiMza-094Z" data-theme:dark required></div>
+                <br>
                 <input class="form-control" type="submit" name="submit"  value="Send" style="width: 200px; background-color: silver;"></center>
                 <input type="hidden" name="_next" value="https://rainyknight.github.io/contact_thanks.html" />
               </div>
@@ -74,7 +79,7 @@
         <footer class="footer">
             <div class="container">
               <hr>
-              <P>Styled with <a href="http://getbootstrap.com/">Bootstrap</a>. | Hosted by <a href="https://pages.github.com/">GitHub Pages</a>.
+              <P>Styled with <a href="http://getbootstrap.com/">Bootstrap</a>.
               <br>
               Copyright &copy; Lucas Stoltman 2016.</p>
             </div>
