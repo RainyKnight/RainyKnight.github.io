@@ -28,7 +28,7 @@ End of message
 ";
 
 /* Send the message using mail() function */
-mail('lucastoltman@gmail.com', 'Test', 'This is the message');
+echo mail('lucastoltman@gmail.com', 'Test', 'This is the message');
 
 /* Redirect visitor to the thank you page
 header('Location: http://lucasstoltman.com/contact_thanks.html');
