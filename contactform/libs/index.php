@@ -34,13 +34,12 @@ if (isset($_POST["submit"])) {
 
 
 if (mail ($to, $subject, $body, $from)) {
-  $result='<div class="alert alert-success">Thanks I will be in touch!</div>';
+  echo '<div class="alert alert-success">Thanks I will be in touch!</div>';
 } else {
-  $result='<div class="alert alert-danger">Sorry, an error occured. Your message failed to send.</div>';
+  echo '<div class="alert alert-danger">Sorry, an error occured. Your message failed to send.</div>';
 }
 
 /* Redirect visitor to the thank you page */
-header('Location: contact_thanks.html');
-exit()
+//header('Location: contact_thanks.html');
 
 ?>
