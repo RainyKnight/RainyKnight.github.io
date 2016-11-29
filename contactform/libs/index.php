@@ -22,4 +22,3 @@ if (isset($_POST['submit'])) {
         echo '<div class="alert alert-danger">Sorry, an error occured. Your message failed to send.</div>';
     }
 }
-?>
