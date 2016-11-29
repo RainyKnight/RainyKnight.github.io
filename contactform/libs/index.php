@@ -8,19 +8,16 @@ if (isset($_POST['submit'])) {
     $to = 'lucastoltman@gmail.com';
     $subject = 'Message from my Website!';
 
-    $body = '<html><body>';
-    $body .= "<b>From: </b>$name\n Email: $email\n Message:\n $comments";
-    $body .= '</body></html>';
-
+    $body = "From: $name\n Email: $email\n Message:\n $comments";
 
     $headers = array(
-        'From:' . $email,
-        'Reply-To:' . $email,
+        'From: forge@padparadscha.voidteam.net',
+        'Reply-To: forge@padparadscha.voidteam.net',
         'X-Mailer: PHP/' . PHP_VERSION
     );
 
     if (mail($to, $subject, $body, implode(' ', $headers))) {
-        header('Location: http://lucasstoltman.com/contact_thanks.html');
+        echo '<div class="alert alert-success">Thanks I will be in touch!</div>';
     } else {
         echo '<div class="alert alert-danger">Sorry, an error occured. Your message failed to send.</div>';
     }
