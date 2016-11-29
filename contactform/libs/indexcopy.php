@@ -30,9 +30,10 @@ End of message
 /* Send the message using mail() function */
 mail($myemail, $subject, $message);
 
-/* Redirect visitor to the thank you page */
+/* Redirect visitor to the thank you page
 header('Location: http://lucasstoltman.com/contact_thanks.html');
 exit();
+*/
 
 /* Functions we used */
 function check_input($data, $problem='')
