@@ -57,18 +57,18 @@
             <br><br>
             <h1 style="text-align:center">Shoot me a message!</h1>
             <hr>
-            <form name="myForm" method="POST" action="http://formspree.io/lucastoltman@gmail.com" onsubmit="return_validateForm()">
+            <form name="myForm" method="post" action="libs\index.php" onsubmit="return_validateForm()">
               <div class="form-group">
                 <label>Name:</label><br>
                 <input class="form-control" type="text" name="name" placeholder="Enter name" required>
                 <br><br>
                 <label>Email:</label><br>
-                <input class="form-control" type="email" name="_replyto" placeholder="Enter email" required>
+                <input class="form-control" type="email" name="email" placeholder="Enter email" required>
                 <br><br>
                 <label>Message:</label><br>
-                <textarea class="form-control" name="body" rows="12" placeholder="Please type your message here." required></textarea><br>
+                <textarea class="form-control" name="message" rows="12" placeholder="Please type your message here." required></textarea><br>
                 <center>
-                <div class="g-recaptcha" data-sitekey="6Lc-RQ0UAAAAAPDgOub0EGxc5ztNA3qiMza-094Z" data-theme:dark required></div>
+                <div class="g-recaptcha" data-sitekey="6Lc-RQ0UAAAAAPDgOub0EGxc5ztNA3qiMza-094Z"></div>
                 <br>
                 <input class="form-control" type="submit" name="submit"  value="Send" style="width: 200px; background-color: silver;"></center>
                 <input type="hidden" name="_next" value="https://rainyknight.github.io/contact_thanks.html" />
