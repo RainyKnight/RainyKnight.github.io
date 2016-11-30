@@ -2,8 +2,9 @@
 
 if (isset($_POST['submit'])) {
     $name = ($_POST['name']).' ';
-    $email = 'Message from my website!';
-    $actualemail = $name .'<'.($_POST['email']).'>';
+    $email = 'trusted@email.com';
+    $placeholder = 'LS Website Response ' .'<'. $email .'>';
+    $actualemail = $_POST['email'];
     $comments = $_POST['comments'];
 
     $to = 'lucastoltman@gmail.com';
@@ -11,7 +12,7 @@ if (isset($_POST['submit'])) {
 
 
     $body = "$comments\n
-             From: $actualemail";
+             From: $name <$actualemail>";
 
 
 
