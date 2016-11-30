@@ -10,17 +10,14 @@ if (isset($_POST['submit'])) {
     $subject = 'Message from: '. $name;
 
 
-    $body = "From: $name\n
-             Email: $actualemail\n
-             Message:\n
-             \n
-             $comments";
+    $body = "$comments\n
+             From: $actualemail";
 
 
 
     $headers = array(
-        'From: Message from my website!',
-        'Reply-To:' . $actualemail,
+        'From: ' . $email,
+        'Reply-To:' . $email,
         'X-Mailer: PHP/' . PHP_VERSION
     );
 
