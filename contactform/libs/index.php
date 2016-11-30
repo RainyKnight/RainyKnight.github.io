@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['submit'])) {
-    $name = 'LS Website Reply';
+    $name = 'LS Website Reply ';
     $actualname = ($_POST['name']).' ';
     $email = $name .'<trusted@email.com>';
     $actualemail = $_POST['email'];
@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $subject = 'Message from: '. $actualname;
     
     $body = "$comments\n
-             From: $actualname\n
+             Name: $actualname\n
              Email: $actualemail\n";
     
     $headers = array(
