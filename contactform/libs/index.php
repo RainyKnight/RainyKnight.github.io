@@ -2,21 +2,25 @@
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
-    $email = $name.'<'.($_POST['email']).'>';
+    $email = $name .'<'.($_POST['email']).'>';
     $comments = $_POST['comments'];
 
     $to = 'lucastoltman@gmail.com';
     $subject = 'Message from my Website!';
 
 
-    $body .= "From: $name\n Email: $email\n Message:\n $comments";
+    $body = "From: $name\n
+             Email: $email\n
+             Message:\n
+             \n
+             $comments";
 
 
 
     $headers = array(
         'From:' . $email,
         'Reply-To:' . $email,
-        //'X-Mailer: PHP/' . PHP_VERSION
+        'X-Mailer: PHP/' . PHP_VERSION
     );
 
     if (mail($to, $subject, $body, implode(' ', $headers))) {
