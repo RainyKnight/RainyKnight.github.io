@@ -3,7 +3,7 @@
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $email_to = "$name <$email>";
+    $email_from = $name.'<'.$email.'>';
     $comments = $_POST['comments'];
 
     $to = 'lucastoltman@gmail.com';
@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 
 
     $headers = array(
-        'From:' . $email_to,
+        'From:' . $email_from,
         'Reply-To:' . $email,
         //'X-Mailer: PHP/' . PHP_VERSION
     );
