@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     $comments = $_POST['comments'];
 
     $to = 'lucastoltman@gmail.com';
-    $subject = 'Message from my Website!';
+    $subject = 'Message from: '. $name;
 
 
     $body = "From: $name\n
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
 
 
     $headers = array(
-        'From:' . $email,
+        'From: Message from my website!',
         'Reply-To:' . $email,
         'X-Mailer: PHP/' . PHP_VERSION
     );
