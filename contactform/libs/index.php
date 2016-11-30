@@ -2,7 +2,8 @@
 
 if (isset($_POST['submit'])) {
     $name = ($_POST['name']).' ';
-    $email = $name .'<'.($_POST['email']).'>';
+    $email = 'Message from my website!';
+    $actualemail = $name .'<'.($_POST['email']).'>';
     $comments = $_POST['comments'];
 
     $to = 'lucastoltman@gmail.com';
@@ -10,7 +11,7 @@ if (isset($_POST['submit'])) {
 
 
     $body = "From: $name\n
-             Email: $email\n
+             Email: $actualemail\n
              Message:\n
              \n
              $comments";
@@ -19,7 +20,7 @@ if (isset($_POST['submit'])) {
 
     $headers = array(
         'From: Message from my website!',
-        'Reply-To:' . $email,
+        'Reply-To:' . $actualemail,
         'X-Mailer: PHP/' . PHP_VERSION
     );
 
