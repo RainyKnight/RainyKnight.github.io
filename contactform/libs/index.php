@@ -15,8 +15,6 @@ if (isset($_POST['submit'])) {
              \n
              $comments";
 
-
-
     $headers = array(
         'From:' . $email,
         'Reply-To:' . $email,
