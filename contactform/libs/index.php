@@ -5,37 +5,23 @@ if (isset($_POST['submit'])) {
     $email = $name .'<trusted@email.com>';
     $actualemail = $_POST['email'];
     $comments = $_POST['comments'];
-<<<<<<< HEAD
-
-    $to = 'lucastoltman@gmail.com';
-    $subject = 'Message from my Website!';
-
-
-    $body = "From: $name\n
-             Email: $email\n
-             Message:\n
-             \n
-             $comments";
-
-=======
     $captcha = $_POST['g-recaptcha-response'];
-    
+
     $to = 'stoltmanlucas@gmail.com';
-    
+
     $subject = 'Message from: '. $actualname;
-    
+
     $body = "$comments\n
              Name: $actualname\n
              Email: $actualemail\n";
-    
->>>>>>> origin/master
+
     $headers = array(
         'From:' . $email,
         'Reply-To:' . $email,
         'X-Mailer: PHP/' . PHP_VERSION
-        
+
     );
-    
+
     if(!$captcha){
           echo '<h2>Please check that you filled out the captcha form.</h2><br>
                 <p>You can click the back arrow without losing the information you entered. :)</p>';
