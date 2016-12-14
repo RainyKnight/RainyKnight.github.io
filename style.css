@@ -30,6 +30,7 @@ hr {
 .fa {
     color: black;
     font-size: 2em;
+    text-align: center;
 }
 
 .fa-facebook-square:hover {
