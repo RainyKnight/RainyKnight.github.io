@@ -45,7 +45,7 @@ $("#start").click(function(){
       }
       //Formatting to make the time look more readable works from 11-60 seconds
       if(breakTime%60>=10){
-          $("#bigNumb").html(Math.floor(bigNumber/60)+":"+bigNumber%60);
+          $("#bigNum").html(Math.floor(bigNumber/60)+":"+bigNumber%60);
       }
       //This covers 0-10 seconds
       else{
