@@ -21,3 +21,29 @@ hr {
     border-style: inset;
     border-width: 1px;
 }
+
+
+.fa {
+    color: black;
+    font-size: 2em;
+}
+
+.fa-facebook-square:hover {
+    color: #3b5998;
+}
+
+.fa-twitter-square:hover {
+    color: #00aced;
+}
+
+.fa-github:hover {
+    color: #4078c0;
+}
+
+.fa-linkedin-square:hover {
+    color: #007bb6;
+}
+
+.fa-soundcloud:hover {
+    color: #ff3a00;
+}
